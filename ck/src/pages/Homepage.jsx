@@ -12,13 +12,21 @@ const Homepage = () => {
       )
       .then((res) => {
         setCoins(res.data);
-        console.log(res.data);
-      });
-  });
+        console.log(res.data)
+      }).catch(error => console.log(error))
+  }, []);
 
   return (
     <div>
       <h1>CRYPTO KINGDOM - API</h1>
+
+      <h2>Search a currency</h2>
+      <form>
+        <input type="text" placeholder="Search" />
+      </form>
+
+      
+
     </div>
   );
 };
