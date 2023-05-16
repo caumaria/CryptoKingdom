@@ -3,21 +3,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Coin from "@/components/Coin";
 import styled from "styled-components";
-import TopHeader from "@/components/TopHeader";
 
-const Container = styled.div`
-  background-color: black;
+const Div = styled.div`
+  background-color: #131313;
   color: white;
-`;
-
-const Header = styled.div`
-  height: 100vh;
-  width: 140px;
-  background-color: #1f1f1f;
-`;
-
-const Center = styled.div`
-  display: flex;
 `;
 
 const Homepage = () => {
@@ -46,34 +35,30 @@ const Homepage = () => {
   );
 
   return (
-    <Container>
-      <TopHeader />
-      <Center>
-        <Header></Header>
-        <div>
-          <h1>CRYPTO KINGDOM - API</h1>
+    <Div>
 
-          <h2>Search a currency</h2>
-          <form>
-            <input type="text" placeholder="Search" onChange={handleChange} />
-          </form>
+      <form>
+        <input
+          type="text"
+          placeholder="Search a currency"
+          onChange={handleChange}
+        />
+      </form>
 
-          {filteredCoins.map((coin) => {
-            return (
-              <Coin
-                key={coin.id}
-                name={coin.name}
-                image={coin.image}
-                symbol={coin.symbol}
-                marketcap={coin.market_cap}
-                price={coin.current_price}
-                priceChange={coin.price_change_percentage_24h}
-              />
-            );
-          })}
-        </div>
-      </Center>
-    </Container>
+      {filteredCoins.map((coin) => {
+        return (
+          <Coin
+            key={coin.id}
+            name={coin.name}
+            image={coin.image}
+            symbol={coin.symbol}
+            marketcap={coin.market_cap}
+            price={coin.current_price}
+            priceChange={coin.price_change_percentage_24h}
+          />
+        );
+      })}
+    </Div>
   );
 };
 
