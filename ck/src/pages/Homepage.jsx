@@ -9,6 +9,12 @@ const Div = styled.div`
   color: white;
 `;
 
+const Input = styled.input`
+  background-color: #1c1c1c;
+  border-radius: 20px;
+  color: white;
+`;
+
 const Homepage = () => {
   const [coins, setCoins] = useState([]);
 
@@ -38,12 +44,18 @@ const Homepage = () => {
     <Div>
 
       <form>
-        <input
+        <Input
           type="text"
           placeholder="Search a currency"
           onChange={handleChange}
         />
       </form>
+
+      <div>
+        <div>Currencies</div>
+        
+
+      </div>
 
       {filteredCoins.map((coin) => {
         return (

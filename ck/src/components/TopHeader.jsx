@@ -19,6 +19,9 @@ const Button = styled.button`
   padding: 0.5rem 1rem;
   font-weight: 700;
   border-color: #52e252;
+  box-shadow: 2px 2px 4px 2px rgba(36, 135, 49, 0.2);
+  margin-right: 1rem;
+  cursor: pointer;
 `;
 
 const TopHeader = () => {

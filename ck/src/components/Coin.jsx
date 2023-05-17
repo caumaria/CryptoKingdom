@@ -1,14 +1,32 @@
-import React from 'react';
+"use client";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+`;
+
+const ContainerFlex = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 700px;
+`;
+
+
 
 const Coin = ({ name, image, symbol, price, priceChange, marketcap}) => {
   return (
-    <div>
-      <div>
-        <img src={image} as="image" alt="" />
-        <h1>{name}</h1>
-        <p>{symbol}</p>
-      </div>
-      <div>
+    <ContainerFlex>
+      <Container>
+        <img src={image} as="image" style={{ width: 20, height: 20 }} />
+        <h3>{name}</h3>
+        <p style={{ fontSize: 10, fontWeight: 200 }}>{symbol}</p>
+      </Container>
+
+      <Container>
         <p>${price}</p>
         {
             priceChange < 0 ? 
@@ -18,8 +36,8 @@ const Coin = ({ name, image, symbol, price, priceChange, marketcap}) => {
             //add css colors 
         }
         <p>Mkt cap: ${marketcap.toLocaleString()}</p>
-      </div>
-    </div>
+      </Container>
+    </ContainerFlex>
   )
 }
 
