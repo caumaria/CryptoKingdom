@@ -7,12 +7,31 @@ import styled from "styled-components";
 const Div = styled.div`
   background-color: #131313;
   color: white;
+  margin-inline: auto;
 `;
 
 const Input = styled.input`
   background-color: #1c1c1c;
   border-radius: 20px;
   color: white;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem 1rem 0;
+`;
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 1rem;
+`;
+
+const ContainerFlex = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 `;
 
 const Homepage = () => {
@@ -27,9 +46,8 @@ const Homepage = () => {
       )
       .then((res) => {
         setCoins(res.data);
-        console.log(res.data);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.warn(error));
   }, []);
 
   const handleChange = (e) => {
@@ -40,9 +58,9 @@ const Homepage = () => {
     coin.name.toLowerCase().includes(search.toLowerCase())
   );
 
+
   return (
     <Div>
-
       <form>
         <Input
           type="text"
@@ -51,11 +69,6 @@ const Homepage = () => {
         />
       </form>
 
-      <div>
-        <div>Currencies</div>
-        
-
-      </div>
 
       {filteredCoins.map((coin) => {
         return (

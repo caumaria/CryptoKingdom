@@ -1,9 +1,8 @@
-"use client";
 import styled from "styled-components";
 
 const Head = styled.div`
   height: 100vh;
-  width: 160px;
+  min-width: 160px;
   background-color: #1c1c1c;
   color: grey;
   align-items: center;
