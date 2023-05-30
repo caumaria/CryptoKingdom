@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Head = styled.div`
-  height: 100vh;
   min-width: 160px;
+  height: 100vh;
   background-color: #1c1c1c;
   color: grey;
   align-items: center;

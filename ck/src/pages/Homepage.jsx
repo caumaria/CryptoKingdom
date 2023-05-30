@@ -34,6 +34,24 @@ const ContainerFlex = styled.div`
   gap: 10px;
 `;
 
+const Table = styled.table`
+  border-collapse: collapse;
+  display: flex;
+  max-width: 700px;
+  color: white;
+  table-layout: fixed;
+  margin: 1rem;
+
+  td {
+    padding: .6rem;
+    width: 100px;
+  }
+
+  @media (max-width: 650px) {    
+    display: none;
+  }
+`;
+
 const Homepage = () => {
   const [coins, setCoins] = useState([]);
 
@@ -58,7 +76,6 @@ const Homepage = () => {
     coin.name.toLowerCase().includes(search.toLowerCase())
   );
 
-
   return (
     <Div>
       <form>
@@ -69,6 +86,18 @@ const Homepage = () => {
         />
       </form>
 
+      <Table>
+        <tbody>
+          <tr>
+            <td>img</td>
+            <td>name</td>
+            <td>symbol</td>
+            <td>price</td>
+            <td>%</td>
+            <td>mktcap</td>
+          </tr>
+        </tbody>
+      </Table>
 
       {filteredCoins.map((coin) => {
         return (

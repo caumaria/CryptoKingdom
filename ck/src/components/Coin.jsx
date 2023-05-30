@@ -6,9 +6,10 @@ const Table = styled.table`
   display: flex;
   max-width: 700px;
   color: white;
-  background-color: #100f0f;
+  background-color: #1a1a1a;
   table-layout: fixed;
   margin: 1rem;
+  border-bottom: 2px solid black;
 
   td {
     padding: .6rem;
@@ -18,7 +19,8 @@ const Table = styled.table`
   @media (max-width: 650px) {
     td {
       display: block;
-      margin: 0 2rem;
+      margin: 0 8rem;
+      width: fit-content;
     }
 
     td::before {
@@ -35,7 +37,7 @@ const Coin = ({ name, image, symbol, price, priceChange, marketcap }) => {
       <tbody>
         <tr>
           <td data-cell="img">
-            <img src={image} as="image" style={{ width: 20, height: 20 }} />
+            <img src={image} as="image" style={{ width: 20, height: 20, marginLeft: 6 }} />
           </td>
           <td data-cell="name">{name}</td>
           <td data-cell="symbol">{symbol}</td>
@@ -46,7 +48,7 @@ const Coin = ({ name, image, symbol, price, priceChange, marketcap }) => {
               {priceChange.toFixed(2)}%
             </td>
           ) : (
-            <td data-cell="%" style={{ color: "green" }}>
+            <td data-cell="24h%" style={{ color: "green" }}>
               {priceChange.toFixed(2)}%
             </td>
           )}

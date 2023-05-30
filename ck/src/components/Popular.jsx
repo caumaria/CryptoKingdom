@@ -78,13 +78,13 @@ const Popular = () => {
               <TitleBox>{info.token} 🔥</TitleBox>
 
               <Center>
-                <div>APR</div>
-                <div>{info.porc}%</div>
+                <p>APR</p>
+                <p>{info.porc}%</p>
               </Center>
 
               <Center>
-                <div>Liquidity</div>
-                <div>{info.liq}</div>
+                <p>Liquidity</p>
+                <p>{info.liq}</p>
               </Center>
             </Box>
           );

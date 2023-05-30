@@ -5,10 +5,14 @@ import TopHeader from "@/components/TopHeader";
 import Homepage from "@/pages/Homepage";
 import styled from "styled-components";
 
-
 const Container = styled.div`
   background-color: #151414;
   display: flex;
+  width: 100%;
+  min-height: 100vh;
+`;
+
+const Div = styled.div`
   width: 100%;
 `;
 
@@ -17,12 +21,10 @@ export default function Home() {
     <Container>
       <Header />
 
-      <div>
+      <Div>
         <TopHeader />
-
-        <Popular />
         <Homepage />
-      </div>
+      </Div>
     </Container>
   );
 }
