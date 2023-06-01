@@ -6,10 +6,9 @@ import Homepage from "@/pages/Homepage";
 import styled from "styled-components";
 
 const Container = styled.div`
-  background-color: #151414;
   display: flex;
-  width: 100%;
-  min-height: 100vh;
+  max-width: 1280px;
+  margin: auto;
 `;
 
 const Div = styled.div`
@@ -23,6 +22,8 @@ export default function Home() {
 
       <Div>
         <TopHeader />
+        <Popular />
+
         <Homepage />
       </Div>
     </Container>

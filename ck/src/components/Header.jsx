@@ -1,37 +1,35 @@
 import styled from "styled-components";
 
 const Head = styled.div`
-  min-width: 160px;
+  min-width: 200px;
   height: 100vh;
-  background-color: #1c1c1c;
-  color: grey;
+  color: #979595;
   align-items: center;
   justify-content: center;
+  border-right: 1px solid #2c2c2c;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const Center = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+  margin: 1em 2rem;
 
-const H1 = styled.h1`
-  font-weight: 700;
-  font-size: 0.7rem;
-  padding: 1rem .5rem;
-  color: white;
-  text-transform: uppercase;
+  img {
+    cursor: pointer;
+  }
 `;
 
 const Li = styled.li`
   border-radius: 20px;
-  padding: 0.5rem 1rem;
-  font-size: 0.8rem;
+  padding: 0.4rem 1rem;
+  font-size: 1.1rem;
   margin: 0.8em 1rem;
   list-style: none;
 
   &:hover {
-    background-color: #52e252;
+    background-color: #26ff93;
     color: black;
     font-weight: 700;
     cursor: pointer;
@@ -42,11 +40,10 @@ const Header = () => {
   return (
     <Head>
       <Center>
-        <img src="cat.png" alt="logo" style={{ width: 30, height: 30 }} />
-        <H1>Crypto Kingdom</H1>
+        <img src="logo.svg" alt="logo" style={{ width: 50, height: 50 }} />
       </Center>
-      <ul style={{ marginTop: 30 }}>
-        <Li>Crypto</Li>
+      <ul style={{ marginTop: 40 }}>
+        <Li style={{ fontWeight: 700, background: '#27342d', borderRadius: 20 }}>• Crypto</Li>
         <Li>Exchanges</Li>
         <Li>NFT</Li>
         <Li>Products</Li>

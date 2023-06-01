@@ -2,17 +2,18 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 100%;
+  margin: 1rem;
+  width: 700px;
 `;
 
 const Title = styled.h4`
-  color: white;
-  padding: 1rem;
+  color: #979595;
+  padding: 1.2rem 1rem;
+  font-size: 1.6rem;
 `;
 
 const ContainerBox = styled.div`
   margin: 0 1rem;
-  color: black;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -21,26 +22,38 @@ const ContainerBox = styled.div`
 const Box = styled.div`
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background: linear-gradient(to right, #2ebf91, #8360c3);
+  width: 260px;
+  background: linear-gradient(to right, #26ff93, #26ffe5);
 
   &:hover {
     cursor: pointer;
     box-shadow: 2px 2px 4px 3px rgba(40, 124, 157, 0.5);
+  }
+
+  @media (max-width: 700) {
+    display: flexbox;
   }
 `;
 
 const TitleBox = styled.h3`
   font-weight: 700;
   margin-bottom: 0.5rem;
+  background-color: inherit;
 `;
 
 const Center = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  gap: 20px;
   font-weight: 600;
   line-height: 1.6;
+  background-color: inherit;
+
+  p {
+    background-color: inherit;
+  }
 `;
 
 const data = [
@@ -58,12 +71,7 @@ const data = [
     token: "ETH-USDT LP",
     porc: 29.1,
     liq: "$9.379.602",
-  },
-  {
-    token: "ETH-USDC LP",
-    porc: 23,
-    liq: "$9.379.602",
-  },
+  }
 ];
 
 const Popular = () => {

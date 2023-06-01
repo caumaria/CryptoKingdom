@@ -5,46 +5,30 @@ import Coin from "@/components/Coin";
 import styled from "styled-components";
 
 const Div = styled.div`
-  background-color: #131313;
   color: white;
-  margin-inline: auto;
 `;
 
 const Input = styled.input`
-  background-color: #1c1c1c;
   border-radius: 20px;
-  color: white;
+  border-color: transparent;
+  background-color: #27342D;
   font-size: 0.9rem;
   padding: 0.5rem 1rem;
-  margin: 1rem 1rem 0;
-`;
-
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 700px;
-  margin: 1rem;
-`;
-
-const ContainerFlex = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  margin: 1rem 2rem;
+  width: 738px;
 `;
 
 const Table = styled.table`
   border-collapse: collapse;
   display: flex;
-  max-width: 700px;
+  max-width: 800px;
   color: white;
   table-layout: fixed;
-  margin: 1rem;
+  margin: 1rem 4.5rem;
+  color: grey;
 
   td {
-    padding: .6rem;
-    width: 100px;
+    width: 106px;
   }
 
   @media (max-width: 650px) {    
@@ -89,12 +73,12 @@ const Homepage = () => {
       <Table>
         <tbody>
           <tr>
-            <td>img</td>
-            <td>name</td>
-            <td>symbol</td>
-            <td>price</td>
-            <td>%</td>
-            <td>mktcap</td>
+            <td>Img</td>
+            <td>Coin</td>
+            <td>Symbol</td>
+            <td>Price</td>
+            <td>24h%</td>
+            <td>MKT cap</td>
           </tr>
         </tbody>
       </Table>
