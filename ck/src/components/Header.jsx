@@ -33,6 +33,10 @@ const Li = styled.li`
     color: black;
     font-weight: 700;
     cursor: pointer;
+
+    :nth-child(1) {
+      color: white;
+    }
   }
 `;
 
@@ -42,7 +46,7 @@ const Header = () => {
       <Center>
         <img src="logo.svg" alt="logo" style={{ width: 50, height: 50 }} />
       </Center>
-      <ul style={{ marginTop: 40 }}>
+      <ul style={{ marginTop: 45 }}>
         <Li style={{ fontWeight: 700, background: '#27342d', borderRadius: 20 }}>• Crypto</Li>
         <Li>Exchanges</Li>
         <Li>NFT</Li>

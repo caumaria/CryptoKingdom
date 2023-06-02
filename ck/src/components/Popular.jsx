@@ -7,7 +7,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h4`
-  color: #979595;
+  color: white;
   padding: 1.2rem 1rem;
   font-size: 1.6rem;
 `;
@@ -58,16 +58,19 @@ const Center = styled.div`
 
 const data = [
   {
+    id: 1,
     token: "BNB-BUSD LP",
     porc: 34.2,
     liq: "$9.379.602",
   },
   {
+    id: 2,
     token: "USDT-BNB LP",
     porc: 36.4,
     liq: "$9.379.602",
   },
   {
+    id: 3,
     token: "ETH-USDT LP",
     porc: 29.1,
     liq: "$9.379.602",
@@ -82,7 +85,7 @@ const Popular = () => {
       <ContainerBox>
         {data.map((info, i) => {
           return (
-            <Box>
+            <Box key={i}>
               <TitleBox>{info.token} 🔥</TitleBox>
 
               <Center>

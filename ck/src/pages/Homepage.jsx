@@ -12,7 +12,7 @@ const Input = styled.input`
   border-radius: 20px;
   border-color: transparent;
   background-color: #27342D;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin: 1rem 2rem;
   width: 738px;
@@ -21,7 +21,7 @@ const Input = styled.input`
 const Table = styled.table`
   border-collapse: collapse;
   display: flex;
-  max-width: 800px;
+  max-width: 600px;
   color: white;
   table-layout: fixed;
   margin: 1rem 4.5rem;

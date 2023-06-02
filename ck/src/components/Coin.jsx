@@ -7,6 +7,7 @@ const DivC = styled.div`
 `;
 
 const DivI = styled.div`
+  width: 0;
   img {
     display: none;
 
@@ -18,7 +19,7 @@ const DivI = styled.div`
       background: transparent;
       position: relative;
       top: 25px;
-      left: 145px;
+      left: 100px;
     }
   }
 `;
@@ -51,9 +52,13 @@ const Table = styled.table`
   }
 
   @media (max-width: 650px) {
+    width: 100%;
+    tbody {
+      width: 100%;
+    }
     td {
       display: block;
-      margin: 1rem 8rem;
+      margin: 1rem 14rem;
       width: fit-content;
     }
 

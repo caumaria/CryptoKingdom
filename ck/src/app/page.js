@@ -12,7 +12,10 @@ const Container = styled.div`
 `;
 
 const Div = styled.div`
-  width: 100%;
+`;
+
+const Margin = styled.div`
+  margin-left: 1rem;
 `;
 
 export default function Home() {
@@ -22,9 +25,11 @@ export default function Home() {
 
       <Div>
         <TopHeader />
-        <Popular />
 
-        <Homepage />
+        <Margin>
+          <Popular />
+          <Homepage />
+        </Margin>
       </Div>
     </Container>
   );
