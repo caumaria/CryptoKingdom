@@ -1,6 +1,10 @@
 "use client";
 import styled from "styled-components";
 
+const FlexCoin = styled.div`
+  display: flex;
+  margin-bottom: .8rem;
+`;
 const DivC = styled.div`
   display: flex;
   width: 100%;
@@ -11,15 +15,15 @@ const DivI = styled.div`
   img {
     display: none;
 
-    @media (max-width: 650px) {
+    @media (max-width: 850px) {
       display: block;
       width: 6rem;
       height: 6rem;
       margin-top: 4rem;
       background: transparent;
       position: relative;
-      top: 25px;
-      left: 100px;
+      top: 18px;
+      left: 60px;
     }
   }
 `;
@@ -29,13 +33,12 @@ const Table = styled.table`
   display: flex;
   color: white;
   table-layout: fixed;
-  margin: 0.4rem 0;
   border-color: transparent;
   width: 100%;
+  
 
   tr {
     background: inherit;
-    padding-right: 2rem;
   }
 
   tbody {
@@ -44,22 +47,23 @@ const Table = styled.table`
     padding: 0.4rem;
     border-color: transparent;
     display: flex;
+    width: 100%;
   }
 
   td {
     background: #27342d;
-    width: 140px;
+    width: 160px;
+    font-size: 1.2rem;
   }
-
-  @media (max-width: 700px) {
+  @media (max-width: 850px) {
     width: 100%;
-    margin-right: 2rem;
     tbody {
       width: 100%;
     }
     td {
       display: block;
-      margin: 1rem 14rem;
+      margin: 1rem;
+      margin-left: 12rem;
       width: fit-content;
     }
 
@@ -70,50 +74,56 @@ const Table = styled.table`
       color: grey;
       padding-right: 0.5rem;
     }
+    tr {
+      overflow: hidden;
+    }
+  
   }
 `;
 
 const Coin = ({ name, image, symbol, price, priceChange, marketcap }) => {
   return (
-    <DivC>
-      <DivI>
-        <img src={image} as="image" />
-      </DivI>
+    <FlexCoin>
+      <DivC>
+        <DivI>
+          <img src={image} as="image" />
+        </DivI>
 
-      <Table>
-        <tbody>
-          <tr>
-            <td data-cell="img" style={{ textAlign: 'center'}}>
-              <img
-                src={image}
-                as="image"
-                style={{
-                  width: 20,
-                  height: 20,
-                  marginLeft: 6,
-                  background: "inherit",
-                }}
-              />
-            </td>
-            <td data-cell="name">{name}</td>
-            <td data-cell="symbol">{symbol.toUpperCase()}</td>
-            <td data-cell="price">${price}</td>
-
-            {priceChange < 0 ? (
-              <td data-cell="24h%" style={{ color: "red" }}>
-                {priceChange.toFixed(2)}%
+        <Table>
+          <tbody>
+            <tr>
+              <td data-cell="img" style={{ textAlign: "center"}}>
+                <img
+                  src={image}
+                  as="image"
+                  style={{
+                    width: 20,
+                    height: 20,
+                    marginLeft: 6,
+                    background: "inherit",
+                  }}
+                />
               </td>
-            ) : (
-              <td data-cell="24h%" style={{ color: "green" }}>
-                {priceChange.toFixed(2)}%
-              </td>
-            )}
+              <td data-cell="name">{name}</td>
+              <td data-cell="symbol">{symbol.toUpperCase()}</td>
+              <td data-cell="price">${price}</td>
 
-            <td data-cell="mktcap">{marketcap.toLocaleString()}</td>
-          </tr>
-        </tbody>
-      </Table>
-    </DivC>
+              {priceChange < 0 ? (
+                <td data-cell="24h%" style={{ color: "red" }}>
+                  {priceChange.toFixed(2)}%
+                </td>
+              ) : (
+                <td data-cell="24h%" style={{ color: "green" }}>
+                  {priceChange.toFixed(2)}%
+                </td>
+              )}
+
+              <td data-cell="mktcap">{marketcap.toLocaleString()}</td>
+            </tr>
+          </tbody>
+        </Table>
+      </DivC>
+    </FlexCoin>
   );
 };
 

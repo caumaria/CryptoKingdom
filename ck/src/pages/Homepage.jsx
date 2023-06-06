@@ -4,37 +4,40 @@ import axios from "axios";
 import Coin from "@/components/Coin";
 import styled from "styled-components";
 
+const FlexHome = styled.div`
+  display: flex;
+`;
+
 const Div = styled.div`
   color: white;
-  width: 800px;
-  margin-left: 2rem;
+  width: 100%;
+  margin: 0 2rem;
 `;
 
 const Input = styled.input`
   border-radius: 20px;
   border-color: transparent;
-  background-color: rgba(39, 52, 45, .5);
+  background-color: rgba(39, 52, 45, 0.5);
   font-size: 1.2rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
   width: 100%;
 `;
 
 const Table = styled.table`
   border-collapse: collapse;
   display: flex;
-  max-width: 800px;
   color: white;
   table-layout: fixed;
-  margin: 1rem 2rem;
   color: grey;
+  margin: 0 0 .5rem .6rem;
 
   td {
-    width: 140px;
+    width: 160px;
   }
 
-  @media (max-width: 650px) {    
+  @media (max-width: 850px) {
     display: none;
   }
 `;
@@ -64,42 +67,44 @@ const Homepage = () => {
   );
 
   return (
-    <Div>
-      <form style={{ marginRight: 32}}>
-        <Input
-          type="text"
-          placeholder="Search a currency"
-          onChange={handleChange}
-        />
-      </form>
-
-      <Table>
-        <tbody>
-          <tr>
-            <td>Img</td>
-            <td>Coin</td>
-            <td>Symbol</td>
-            <td>Price</td>
-            <td>24h%</td>
-            <td>MKT cap</td>
-          </tr>
-        </tbody>
-      </Table>
-
-      {filteredCoins.map((coin) => {
-        return (
-          <Coin
-            key={coin.id}
-            name={coin.name}
-            image={coin.image}
-            symbol={coin.symbol}
-            marketcap={coin.market_cap}
-            price={coin.current_price}
-            priceChange={coin.price_change_percentage_24h}
+    <FlexHome>
+      <Div>
+        <form>
+          <Input
+            type="text"
+            placeholder="Search a currency"
+            onChange={handleChange}
           />
-        );
-      })}
-    </Div>
+        </form>
+
+        <Table>
+          <tbody>
+            <tr>
+              <td style={{textAlign: 'center'}}>Img</td>
+              <td>Coin</td>
+              <td>Symbol</td>
+              <td>Price</td>
+              <td>24h%</td>
+              <td>MKT cap</td>
+            </tr>
+          </tbody>
+        </Table>
+
+        {filteredCoins.map((coin) => {
+          return (
+            <Coin
+              key={coin.id}
+              name={coin.name}
+              image={coin.image}
+              symbol={coin.symbol}
+              marketcap={coin.market_cap}
+              price={coin.current_price}
+              priceChange={coin.price_change_percentage_24h}
+            />
+          );
+        })}
+      </Div>
+    </FlexHome>
   );
 };
 

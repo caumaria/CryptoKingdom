@@ -47,7 +47,7 @@ const Header = () => {
       <Center>
         <img src="logo.svg" alt="logo" style={{ width: 50, height: 50 }} />
       </Center>
-      <ul style={{ marginTop: 45 }}>
+      <ul style={{ marginTop: 30 }}>
         <Li>• Crypto</Li>
         <Li>Exchanges</Li>
         <Li>NFT</Li>

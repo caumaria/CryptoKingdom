@@ -3,12 +3,11 @@ import styled from "styled-components";
 
 const FlexPopular = styled.div`
   display: flex;
-  margin-right: 1rem;
 `;
 
 const Container = styled.div`
   width: 100%;
-  margin-left: 2rem;
+  margin: 0 2rem;
 `;
 
 const Title = styled.h4`

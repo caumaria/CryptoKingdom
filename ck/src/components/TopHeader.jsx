@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const FlexHeader = styled.div`
   display: flex;
-  margin-right: 1rem;
+  border-bottom: 1px solid #2c2c2c;
 `;
 
 const DivHeader = styled.div`
@@ -10,12 +10,10 @@ const DivHeader = styled.div`
   display: flex;
   justify-content: space-between;
   height: 5rem;
-  background-color: #1a1a1a;
-  border-bottom: 1px solid #2c2c2c;
   width: 100%;
+  margin: 0 2rem;
 
   h1 {
-    margin-left: 2rem;
     font-weight: 600;
     color: white;
 

@@ -24,6 +24,7 @@ export default function Home() {
         <Div>
           <TopHeader />
           <Popular />
+          <Homepage />
         </Div>
       </Container>
     
