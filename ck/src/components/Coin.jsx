@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const DivC = styled.div`
   display: flex;
-  width: 800px;
+  width: 100%;
 `;
 
 const DivI = styled.div`
@@ -29,8 +29,9 @@ const Table = styled.table`
   display: flex;
   color: white;
   table-layout: fixed;
-  margin: 0.4rem 2rem;
+  margin: 0.4rem 0;
   border-color: transparent;
+  width: 100%;
 
   tr {
     background: inherit;
@@ -41,7 +42,6 @@ const Table = styled.table`
     border-radius: 20px;
     background: #27342d;
     padding: 0.4rem;
-    max-width: 800px;
     border-color: transparent;
     display: flex;
   }
@@ -51,8 +51,9 @@ const Table = styled.table`
     width: 140px;
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     width: 100%;
+    margin-right: 2rem;
     tbody {
       width: 100%;
     }

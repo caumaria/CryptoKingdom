@@ -1,21 +1,26 @@
 import styled from "styled-components";
 
-const Div = styled.div`
+const FlexHeader = styled.div`
+  display: flex;
+  margin-right: 1rem;
+`;
+
+const DivHeader = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
   height: 5rem;
-  width: 100%;
   background-color: #1a1a1a;
   border-bottom: 1px solid #2c2c2c;
+  width: 100%;
 
   h1 {
     margin-left: 2rem;
     font-weight: 600;
     color: white;
 
-    @media (max-width: 700px) {
-      font-size: 1.6rem;
+    @media (max-width: 500px) {
+      font-size: 1rem;
     }
   }
 `;
@@ -24,8 +29,8 @@ const Button = styled.button`
   background-color: #26ff93;
   color: black;
   border-radius: 22px;
-  width: 12rem;
-  padding: 0.7rem;
+  max-width: 12rem;
+  padding: .7rem 2rem;
   font-weight: 700;
   font-size: 1rem;
   border-color: transparent;
@@ -35,10 +40,12 @@ const Button = styled.button`
 
 const TopHeader = () => {
   return (
-    <Div>
-      <h1>Crypto Tracker</h1>
-      <Button>Connect Wallet</Button>
-    </Div>
+    <FlexHeader>
+      <DivHeader>
+        <h1>Crypto Tracker</h1>
+        <Button>Connect Wallet</Button>
+      </DivHeader>
+    </FlexHeader>
   );
 };
 

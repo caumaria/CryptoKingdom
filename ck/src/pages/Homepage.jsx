@@ -6,29 +6,32 @@ import styled from "styled-components";
 
 const Div = styled.div`
   color: white;
+  width: 800px;
+  margin-left: 2rem;
 `;
 
 const Input = styled.input`
   border-radius: 20px;
   border-color: transparent;
-  background-color: #27342D;
+  background-color: rgba(39, 52, 45, .5);
   font-size: 1.2rem;
+  font-weight: 500;
   padding: 0.5rem 1rem;
-  margin: 1rem 2rem;
-  width: 738px;
+  margin-top: 2rem;
+  width: 100%;
 `;
 
 const Table = styled.table`
   border-collapse: collapse;
   display: flex;
-  max-width: 600px;
+  max-width: 800px;
   color: white;
   table-layout: fixed;
-  margin: 1rem 4.5rem;
+  margin: 1rem 2rem;
   color: grey;
 
   td {
-    width: 106px;
+    width: 140px;
   }
 
   @media (max-width: 650px) {    
@@ -62,7 +65,7 @@ const Homepage = () => {
 
   return (
     <Div>
-      <form>
+      <form style={{ marginRight: 32}}>
         <Input
           type="text"
           placeholder="Search a currency"

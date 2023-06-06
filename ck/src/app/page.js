@@ -7,30 +7,25 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  max-width: 1280px;
-  margin: auto;
+  max-width: 80rem;
+  height: 100vh;
+  width: 100%;
 `;
 
 const Div = styled.div`
-`;
-
-const Margin = styled.div`
-  margin-left: 1rem;
+  width: 100%;
 `;
 
 export default function Home() {
   return (
-    <Container>
-      <Header />
-
-      <Div>
-        <TopHeader />
-
-        <Margin>
+    
+      <Container>
+        <Header />
+        <Div>
+          <TopHeader />
           <Popular />
-          <Homepage />
-        </Margin>
-      </Div>
-    </Container>
+        </Div>
+      </Container>
+    
   );
 }

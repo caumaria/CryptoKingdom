@@ -1,37 +1,45 @@
 "use client";
 import styled from "styled-components";
 
+const FlexPopular = styled.div`
+  display: flex;
+  margin-right: 1rem;
+`;
+
 const Container = styled.div`
-  margin: 1rem;
-  width: 700px;
+  width: 100%;
+  margin-left: 2rem;
 `;
 
 const Title = styled.h4`
   color: white;
-  padding: 1.2rem 1rem;
+  margin: 1.2rem 0;
   font-size: 1.6rem;
 `;
 
 const ContainerBox = styled.div`
-  margin: 0 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  @media (max-width: 850px) {
+    display: block;
+  }
 `;
 
 const Box = styled.div`
   padding: 0.5rem;
   border-radius: 0.5rem;
-  width: 260px;
+  width: 33%;
   background: linear-gradient(to right, #26ff93, #26ffe5);
 
   &:hover {
     cursor: pointer;
     box-shadow: 2px 2px 4px 3px rgba(40, 124, 157, 0.5);
   }
-
-  @media (max-width: 700) {
-    display: flexbox;
+  @media (max-width: 850px) {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -46,7 +54,7 @@ const Center = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: 1rem;
-  gap: 20px;
+  gap: 1rem;
   font-weight: 600;
   line-height: 1.6;
   background-color: inherit;
@@ -74,34 +82,36 @@ const data = [
     token: "ETH-USDT LP",
     porc: 29.1,
     liq: "$9.379.602",
-  }
+  },
 ];
 
 const Popular = () => {
   return (
-    <Container>
-      <Title>Popular Staking Pools</Title>
+    <FlexPopular>
+      <Container>
+        <Title>Popular Staking Pools</Title>
 
-      <ContainerBox>
-        {data.map((info, i) => {
-          return (
-            <Box key={i}>
-              <TitleBox>{info.token} 🔥</TitleBox>
+        <ContainerBox>
+          {data.map((info, i) => {
+            return (
+              <Box key={i}>
+                <TitleBox>{info.token} 🔥</TitleBox>
 
-              <Center>
-                <p>APR</p>
-                <p>{info.porc}%</p>
-              </Center>
+                <Center>
+                  <p>APR</p>
+                  <p>{info.porc}%</p>
+                </Center>
 
-              <Center>
-                <p>Liquidity</p>
-                <p>{info.liq}</p>
-              </Center>
-            </Box>
-          );
-        })}
-      </ContainerBox>
-    </Container>
+                <Center>
+                  <p>Liquidity</p>
+                  <p>{info.liq}</p>
+                </Center>
+              </Box>
+            );
+          })}
+        </ContainerBox>
+      </Container>
+    </FlexPopular>
   );
 };
 

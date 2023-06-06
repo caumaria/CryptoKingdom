@@ -8,7 +8,7 @@ const Head = styled.div`
   justify-content: center;
   border-right: 1px solid #2c2c2c;
 
-  @media (max-width: 700px) {
+  @media (max-width: 850px) {
     display: none;
   }
 `;
@@ -25,18 +25,19 @@ const Li = styled.li`
   border-radius: 20px;
   padding: 0.4rem 1rem;
   font-size: 1.1rem;
+  font-weight: 300;
   margin: 0.8em 1rem;
   list-style: none;
+  color: white;
+
+  :nth-child(1) {
+      font-weight: 700;
+  }
 
   &:hover {
-    background-color: #26ff93;
-    color: black;
+    background-color: #27342d;
     font-weight: 700;
     cursor: pointer;
-
-    :nth-child(1) {
-      color: white;
-    }
   }
 `;
 
@@ -47,7 +48,7 @@ const Header = () => {
         <img src="logo.svg" alt="logo" style={{ width: 50, height: 50 }} />
       </Center>
       <ul style={{ marginTop: 45 }}>
-        <Li style={{ fontWeight: 700, background: '#27342d', borderRadius: 20 }}>• Crypto</Li>
+        <Li>• Crypto</Li>
         <Li>Exchanges</Li>
         <Li>NFT</Li>
         <Li>Products</Li>
