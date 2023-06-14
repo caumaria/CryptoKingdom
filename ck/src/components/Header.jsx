@@ -11,8 +11,9 @@ const Head = styled.div`
   z-index: 99;
 
   @media (max-width: 850px) {
-    height: 70px;
+    height: 80px;
     border-color: transparent;
+    position: absolute;
 
     ul, li {
       display: none;
@@ -32,7 +33,7 @@ const Head = styled.div`
 `;
 
 const Center = styled.div`
-  margin: 1em 2rem;
+  margin: 1rem 2rem;
 
   img {
     cursor: pointer;
