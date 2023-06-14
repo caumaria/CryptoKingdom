@@ -8,9 +8,26 @@ const Head = styled.div`
   justify-content: center;
   border-right: 1px solid #2c2c2c;
   position: fixed;
+  z-index: 99;
 
   @media (max-width: 850px) {
-    display: none;
+    height: 70px;
+    border-color: transparent;
+
+    ul, li {
+      display: none;
+    }
+
+    :hover, :focus, :active {
+      height: 100vh;
+      border-right: 1px solid #2c2c2c;
+      min-width: 200px;
+
+      ul, li {
+        display: block;
+      }
+
+    }
   }
 `;
 
