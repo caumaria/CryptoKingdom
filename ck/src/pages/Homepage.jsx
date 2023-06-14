@@ -55,7 +55,7 @@ const Homepage = () => {
       .then((res) => {
         setCoins(res.data);
       })
-      .catch((error) => console.warn(error));
+      .catch((error) => console.error(error));
   }, []);
 
   const handleChange = (e) => {

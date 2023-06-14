@@ -14,6 +14,11 @@ const Container = styled.div`
 
 const Div = styled.div`
   width: 100%;
+  margin-left: 200px;
+
+  @media (max-width: 850px) {
+    margin-left: 0;
+  }
 `;
 
 export default function Home() {
@@ -24,7 +29,7 @@ export default function Home() {
         <Div>
           <TopHeader />
           <Popular />
-          <Homepage />
+          
         </Div>
       </Container>
     

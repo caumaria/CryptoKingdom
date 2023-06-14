@@ -7,6 +7,7 @@ const Head = styled.div`
   align-items: center;
   justify-content: center;
   border-right: 1px solid #2c2c2c;
+  position: fixed;
 
   @media (max-width: 850px) {
     display: none;
@@ -41,20 +42,25 @@ const Li = styled.li`
   }
 `;
 
+const Ul = styled.ul`
+  margin-top: 30px;
+`;
+
 const Header = () => {
   return (
     <Head>
       <Center>
         <img src="logo.svg" alt="logo" style={{ width: 50, height: 50 }} />
       </Center>
-      <ul style={{ marginTop: 30 }}>
+
+      <Ul>
         <Li>• Crypto</Li>
         <Li>Exchanges</Li>
         <Li>NFT</Li>
         <Li>Products</Li>
         <Li>My Portfolio</Li>
         <Li>My Rewards</Li>
-      </ul>
+      </Ul>
     </Head>
   );
 };

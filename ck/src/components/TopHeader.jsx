@@ -3,6 +3,10 @@ import styled from "styled-components";
 const FlexHeader = styled.div`
   display: flex;
   border-bottom: 1px solid #2c2c2c;
+
+  @media (max-width: 850px) {
+    display: none;
+  }
 `;
 
 const DivHeader = styled.div`
@@ -16,10 +20,6 @@ const DivHeader = styled.div`
   h1 {
     font-weight: 600;
     color: white;
-
-    @media (max-width: 500px) {
-      font-size: 1rem;
-    }
   }
 `;
 
