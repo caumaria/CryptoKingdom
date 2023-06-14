@@ -18,6 +18,7 @@ const Div = styled.div`
 
   @media (max-width: 850px) {
     margin-left: 0;
+    margin-top: 70px;
   }
 `;
 
@@ -29,7 +30,7 @@ export default function Home() {
         <Div>
           <TopHeader />
           <Popular />
-          
+
         </Div>
       </Container>
     
