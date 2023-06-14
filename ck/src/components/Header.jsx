@@ -21,6 +21,7 @@ const Head = styled.div`
     :hover, :focus, :active {
       height: 100vh;
       border-right: 1px solid #2c2c2c;
+      min-width: 200px;
 
       ul, li {
         display: block;
