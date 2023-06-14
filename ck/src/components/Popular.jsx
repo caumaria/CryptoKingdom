@@ -31,11 +31,8 @@ const Box = styled.div`
   border-radius: 0.5rem;
   width: 33%;
   background: linear-gradient(to right, #26ff93, #26ffe5);
+  cursor: pointer;
 
-  &:hover {
-    cursor: pointer;
-    box-shadow: 2px 2px 4px 3px rgba(40, 124, 157, 0.5);
-  }
   @media (max-width: 850px) {
     width: 100%;
     margin-bottom: 1rem;
